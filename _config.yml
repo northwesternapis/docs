@@ -1,0 +1,12 @@
+# Site settings
+title: Northwestern Course Data API documentation
+email: asg-technology@u.northwestern.edu
+description: "Documentation for Northwestern University's course data API"
+baseurl: ""
+url: "http://developer.asg.northwestern.edu"
+twitter_username: northwesternasg
+github_username:  northwesternapi
+
+# Build settings
+markdown: kramdown
+permalink: pretty
