@@ -1,0 +1,73 @@
+---
+layout: base
+title: Documentation | Northwestern Course Data API
+---
+
+<div class="container">
+  <div id="top" class="row">
+    <div class="col-md-12">
+      <h1>Northwestern Course Data API Documentation</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      {% include getting-started.html %}
+      {% include terms.html %}
+      {% include schools.html %}
+      {% include subjects.html %}
+      {% include courses.html %}
+      {% include courses-detailed.html %}
+      {% include instructors.html %}
+      {% include buildings.html %}
+      {% include rooms.html %}
+    </div>
+
+    <div class="col-md-3">
+      <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+        <ul class="nav bs-docs-sidenav">
+          <li><a href="#getting-started">Getting started</a></li>
+
+          <li class="sidebar-section-label">Endpoints</li>
+          <li><a href="#terms">/terms/</a></li>
+          <li><a href="#schools">/schools/</a></li>
+          <li><a href="#subjects">/subjects/</a></li>
+          <li>
+            <a href="#courses">/courses/</a>
+            <ul class="nav">
+              <li><a href="#courses-examples">Examples</a></li>
+              <li><a href="#courses-endpoints">Endpoints</a></li>
+              <li><a href="#courses-parameters">Parameters</a></li>
+              <li><a href="#courses-response-format">Response format</a></li>
+            </ul>
+          </li>
+          <li><a href="#courses-detailed">/courses/detailed/</a></li>
+          <li><a href="#instructors">/instructors/</a></li>
+          <li><a href="#buildings">/buildings/</a></li>
+          <li><a href="#rooms">/rooms/</a></li>
+        </ul>
+        <a class="menu-bottom-link" href="https://api.asg.northwestern.edu/manage/projects/">Manage your keys</a>
+        <a class="menu-bottom-link" href="/">Homepage</a>
+        <a class="menu-bottom-link" href="#top">Back to top</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// Borowed from Bootstrap 3's docs
+var $window = $(window)
+var $body   = $(document.body)
+
+$body.scrollspy({
+  target: '.bs-docs-sidebar'
+})
+$sideBar = $('.bs-docs-sidebar')
+$sideBar.affix({
+  offset: {
+    top: 40
+  }
+});
+
+
+</script>
