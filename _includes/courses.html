@@ -15,6 +15,10 @@
   </thead>
   <tbody>
     <tr>
+      <td><code>id</code></td>
+      <td>unique id of the course, used only by this API</td>
+    </tr>
+    <tr>
       <td><code>term</code></td>
       <td><strong>required</strong> id of the term for which to return courses</td>
     </tr>
@@ -31,8 +35,8 @@
       <td>id of a room</td>
     </tr>
     <tr>
-      <td><code>course_num</code></td>
-      <td>course number e.g. 101-3 in CHEM 101-3. Accepts one or more characters to use as a filter</td>
+      <td><code>catalog_num</code></td>
+      <td>departmental catalog number of the course, including the sequence number</td>
     </tr>
     <tr>
       <td><code>meeting_days</code></td>
@@ -59,12 +63,20 @@
       <td>number of seats in the course</td>
     </tr>
     <tr>
-      <td><code>section_num</code></td>
-      <td>section number of a given course</td>
-    </tr>
-    <tr>
       <td><code>component</code></td>
       <td>e.g. LECTURE, LAB</td>
+    </tr>
+    <tr>
+      <td><code>section</code></td>
+      <td>a particular occurrence of this course. Used to help identify the course if multiple professors or times are offered in a given term</td>
+    </tr>
+    <tr>
+      <td><code>class_num</code></td>
+      <td>University's class number for the course, not unique</td>
+    </tr>
+    <tr>
+      <td><code>course_id</code></td>
+      <td>University's id number for the course, not unique</td>
     </tr>
   </tbody>
 </table>
@@ -73,7 +85,7 @@
 
 
 <h3 id="courses-response-format">Response format</h3>
-<p>Here's an example of the structure of the course data returned:</p>
+<p>Course data is returned in lists of objects. Each object has the following structure:</p>
 {% highlight json %}
 {
   "id": 78818,
@@ -94,3 +106,19 @@
 }
 {% endhighlight %}
 <p>TODO: what fields are null, etc</p>
+
+<p>Explanations of other fields:</p>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>topic</code></td>
+      <td>title of a topics course&mdash;courses that all have the same subject and number e.g. EECS 395</td>
+    </tr>
+  </tbody>
+</table>
