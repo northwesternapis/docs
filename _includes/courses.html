@@ -6,7 +6,7 @@
 
 <h3 id="courses-parameters">Parameters</h3>
 
-<table class="table table-hover">
+<table class="table table-hover table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -15,55 +15,55 @@
   </thead>
   <tbody>
     <tr>
-      <td>term</td>
+      <td><code>term</code></td>
       <td><strong>required</strong> id of the term for which to return courses</td>
     </tr>
     <tr>
-      <td>subject</td>
+      <td><code>subject</code></td>
       <td>symbol of a subject</td>
     </tr>
     <tr>
-      <td>instructor</td>
+      <td><code>instructor</code></td>
       <td>id of an instructor</td>
     </tr>
     <tr>
-      <td>room</td>
+      <td><code>room</code></td>
       <td>id of a room</td>
     </tr>
     <tr>
-      <td>course_num</td>
+      <td><code>course_num</code></td>
       <td>course number e.g. 101-3 in CHEM 101-3. Accepts one or more characters to use as a filter</td>
     </tr>
     <tr>
-      <td>meeting_days</td>
+      <td><code>meeting_days</code></td>
       <td>TODO __including, __excluding?</td>
     </tr>
     <tr>
-      <td>start_time</td>
+      <td><code>start_time</code></td>
       <td></td>
     </tr>
     <tr>
-      <td>end_time</td>
+      <td><code>end_time</code></td>
       <td></td>
     </tr>
     <tr>
-      <td>start_date</td>
+      <td><code>start_date</code></td>
       <td></td>
     </tr>
     <tr>
-      <td>end_date</td>
+      <td><code>end_date</code></td>
       <td></td>
     </tr>
     <tr>
-      <td>seats</td>
+      <td><code>seats</code></td>
       <td>number of seats in the course</td>
     </tr>
     <tr>
-      <td>section_num</td>
+      <td><code>section_num</code></td>
       <td>section number of a given course</td>
     </tr>
     <tr>
-      <td>component</td>
+      <td><code>component</code></td>
       <td>e.g. LECTURE, LAB</td>
     </tr>
   </tbody>
@@ -76,21 +76,21 @@
 <p>Here's an example of the structure of the course data returned:</p>
 {% highlight json %}
 {
-  "id": 53602,
-  "title": "Introduction to Macroeconomics",
-  "instructor": "Mark P Witte",
-  "subject": "ECON",
-  "catalog_num": "201-0",
-  "section": "50",
-  "room": "Leverone Auditorium Owen Coon",
+  "id": 78818,
+  "title": "Music and Mind",
+  "instructor": "Richard D Ashley",
+  "subject": "MUS_THRY",
+  "catalog_num": "251-0",
+  "section": "20",
+  "room": "Music Administration Bldg 229",
   "meeting_days": "MoWeFr",
-  "start_time": "12:00:00",
-  "end_time": "12:50:00",
-  "seats": 240,
+  "start_time": "09:00:00",
+  "end_time": "09:50:00",
+  "seats": 20,
   "topic": null,
   "component": "LEC",
-  "class_num": 30497,
-  "course_id": 1646
+  "class_num": 16834,
+  "course_id": 19151
 }
 {% endhighlight %}
 <p>TODO: what fields are null, etc</p>
