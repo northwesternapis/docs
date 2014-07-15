@@ -9,8 +9,14 @@ title: Northwestern Course Data API
   color: #fff;
   padding: 30px 0;
 }
-.home-top h1 {
-  font-weight: normal;
+.big-lead {
+  font-size: 24px;
+}
+.feature {
+  padding: 20px;
+}
+.features img {
+  max-width: 100%;
 }
 </style>
 
@@ -19,7 +25,7 @@ title: Northwestern Course Data API
     <div class="row bottom30">
       <div class="col-md-offset-2 col-md-8 text-center">
         <h1>Northwestern Course Data API</h1>
-        <p class="lead">Easily develop web applications with Northwestern University course data. Query data in ways CAESAR can't comprehend.</p>
+        <p class="big-lead lead">Easily develop web applications with Northwestern University course data. Query data in ways CAESAR can't comprehend.</p>
       </div>
     </div>
     <div class="row">
@@ -35,14 +41,36 @@ title: Northwestern Course Data API
   </div>
 </div>
 
-<div class="container">
+<div class="container features">
   <div class="row top10">
     <div class="col-sm-4">
-      <h2>image here?</h2>
+      <img src="{{ "/static/img/blurred_json.png" | prepend: site.baseurl }}">
     </div>
-    <div class="col-sm-8">
-      <p>Filter courses by term, professor, subject, and more.</p>
+    <div class="feature col-sm-8">
+      <h3>Stop scraping CAESAR</h3>
+      <p class="lead">Get up-to-date course data in an easy-to-use JSON format.</p>
     </div>
   </div>
 
+  <div class="row top10">
+    <div class="col-sm-4 col-sm-push-8">
+      <img src="{{ "/static/img/blurred_json.png" | prepend: site.baseurl }}">
+    </div>
+    <div class="feature text-right col-sm-8 col-sm-pull-4">
+      <h3>Filter courses in new ways</h3>
+      <p class="lead">Specify rooms or instructors</p>
+    </div>
+  </div>
+
+  <div class="row top10">
+    <div class="col-sm-4">
+      <img src="{{ "/static/img/blurred_json.png" | prepend: site.baseurl }}">
+    </div>
+    <div class="feature col-sm-8">
+      <h3>Access extra metadata</h3>
+      <p class="lead">Instructor bios and geographic location of campus buildings</p>
+    </div>
+  </div>
 </div>
+
+{% include footer.html %}

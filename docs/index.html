@@ -3,12 +3,24 @@ layout: base
 title: Documentation | Northwestern Course Data API
 ---
 
-<div class="container">
-  <div id="top" class="row">
-    <div class="col-md-12">
-      <h1>Northwestern Course Data API Documentation</h1>
+<style>
+#top {
+  background-color: #86608E;
+  padding: 10px 0;
+  color: #fff;
+}
+</style>
+
+<div id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Northwestern Course Data API Documentation</h1>
+      </div>
     </div>
   </div>
+</div>
+<div class="container">
   <div class="row">
     <div class="col-md-9">
       {% include getting-started.html %}
@@ -53,6 +65,8 @@ title: Documentation | Northwestern Course Data API
     </div>
   </div>
 </div>
+
+{% include footer.html %}
 
 <script src="{{ "/static/js/jquery.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/static/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>

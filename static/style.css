@@ -4,22 +4,13 @@ body {
     position: relative;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 300;
-}
-
-
 .btn-transp,
 .btn-transp:active,
 .btn-transp:focus,
 .btn-transp:hover {
     border-color: #fff;
     color: inherit;
+    font-size: 22px;
 }
 .btn-transp {
     background-color: transparent;
