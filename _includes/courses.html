@@ -1,31 +1,96 @@
 <h2 id="courses">Courses</h2>
-<h3 id="courses-examples">Examples</h3>
+<p>Returns a list of courses.</p>
 
-<h3 id="courses-endpoints">Endpoints</h3>
+<h3 id="courses-examples">Examples</h3>
+<p>To find all Spanish courses offered during Winter 2014, send a request to /courses/ with the parameters <code>term</code> set to 4530 and <code>subject</code> set to SPANISH, i.e. <code>http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPANISH</code>.</p>
 
 <h3 id="courses-parameters">Parameters</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>term</td>
+      <td><strong>required</strong> id of the term for which to return courses</td>
+    </tr>
+    <tr>
+      <td>subject</td>
+      <td>symbol of a subject</td>
+    </tr>
+    <tr>
+      <td>instructor</td>
+      <td>id of an instructor</td>
+    </tr>
+    <tr>
+      <td>room</td>
+      <td>id of a room</td>
+    </tr>
+    <tr>
+      <td>course_num</td>
+      <td>course number e.g. 101-3 in CHEM 101-3. Accepts one or more characters to use as a filter</td>
+    </tr>
+    <tr>
+      <td>meeting_days</td>
+      <td>TODO __including, __excluding?</td>
+    </tr>
+    <tr>
+      <td>start_time</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>end_time</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>start_date</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>end_date</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>seats</td>
+      <td>number of seats in the course</td>
+    </tr>
+    <tr>
+      <td>section_num</td>
+      <td>section number of a given course</td>
+    </tr>
+    <tr>
+      <td>component</td>
+      <td>e.g. LECTURE, LAB</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code>start_time</code>, <code>end_time</code>, <code>start_date</code>, and <code>end_date</code> expect exact values by default. You can append <code>__lt</code> or <code>__gt</code> to each of them to filter by values that are less than or greater than the value you specify.</p>
+
 
 <h3 id="courses-response-format">Response format</h3>
 <p>Here's an example of the structure of the course data returned:</p>
 {% highlight json %}
-[{
-    "id": 53602,
-    "title": "Introduction to Macroeconomics",
-    "instructor": "Mark P Witte",
-    "subject": "ECON",
-    "catalog_num": "201-0",
-    "section": "50",
-    "room": "Leverone Auditorium Owen Coon",
-    "meeting_days": "MoWeFr",
-    "start_time": "12:00:00",
-    "end_time": "12:50:00",
-    "seats": 240,
-    "topic": null,
-    "component": "LEC",
-    "class_num": 30497,
-    "course_id": 1646
-},
-"(more objects omitted)"
-]
+{
+  "id": 53602,
+  "title": "Introduction to Macroeconomics",
+  "instructor": "Mark P Witte",
+  "subject": "ECON",
+  "catalog_num": "201-0",
+  "section": "50",
+  "room": "Leverone Auditorium Owen Coon",
+  "meeting_days": "MoWeFr",
+  "start_time": "12:00:00",
+  "end_time": "12:50:00",
+  "seats": 240,
+  "topic": null,
+  "component": "LEC",
+  "class_num": 30497,
+  "course_id": 1646
+}
 {% endhighlight %}
 <p>TODO: what fields are null, etc</p>
