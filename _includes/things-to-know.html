@@ -1,8 +1,4 @@
 <h2 id="things-to-know" class="page-header">Things to know</h2>
-<p>The base URL for the Course Data API is:</p>
-<pre>
-http://api.asg.northwestern.edu/
-</pre>
 <p>The API is accessible using HTTP or HTTPS. HTTPS should be used to avoid browser warnings if the application making the requests is served over HTTPS.</p>
 <p>All responses are formatted in JSON (<a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JavaScript Object Notation</a>). Responses are <a href="http://en.wikipedia.org/wiki/Gzip" target="_blank">gzipped</a> when possible. Include an <code>Accept-Encoding: gzip</code> header in your requests to enable this and reduce bandwidth usage by 60 to 90%, depending on the size of the response.</p>
 <p>You can specify sites to allow cross-site requests from for each project. For instance, adding <code>www.example.com</code> as an allowed referrer will cause an <code>Access-Control-Allow-Origin: www.example.com</code> header to be included in responses to requests made with the API key for that project.</p>
