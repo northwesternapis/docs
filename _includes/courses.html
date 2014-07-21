@@ -2,10 +2,23 @@
 <p>Returns a list of courses.</p>
 
 <h3 id="courses-examples">Examples</h3>
-<p>To find all Spanish courses offered during Winter 2014, send a request to /courses/ with the parameters <code>term</code> set to 4530 and <code>subject</code> set to SPANISH, i.e. <code>http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPANISH</code>.</p>
+<p>To find all Spanish courses offered during Winter 2014, send a request to /courses/ with the parameters <strong>term</strong> set to 4530 and <strong>subject</strong> set to SPANISH, i.e.</p>
+<pre>
+http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPANISH
+</pre>
 
 <h3 id="courses-parameters">Parameters</h3>
 
+<p>To query the /courses/ endpoint, you must include a minimum set of parameters. These combinations are listed below. You can include additional parameters to narrow down your search, but the set of parameters must include one of these combinations.</p>
+<p><span class="lead">TODO</span> there are a maximum of 200 courses returned per response. If a response is truncated, there will be a <code>Response-Warning</code> header included</p>
+<ul>
+  <li><strong>instructor</strong></li>
+  <li><strong>id</strong> (there can be multiple)</li>
+  <li><strong>term, subject</strong></li>
+  <li><strong>term, room</strong></li>
+</ul>
+
+<p>Here are descriptions of all available parameters:</p>
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -15,73 +28,73 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>id</code></td>
-      <td>unique id of the course, used only by this API</td>
+      <td><strong>id</strong></td>
+      <td>id of the course. Uniquely idenfities a course; used only by this API</td>
     </tr>
     <tr>
-      <td><code>term</code></td>
-      <td><strong>required</strong> id of the term for which to return courses</td>
+      <td><strong>term</strong></td>
+      <td>id of the term</td>
     </tr>
     <tr>
-      <td><code>subject</code></td>
-      <td>symbol of a subject</td>
+      <td><strong>subject</strong></td>
+      <td>symbol representing the subject of the course<br><strong>Examples:</strong> BIOL_SCI, PHIL</td>
     </tr>
     <tr>
-      <td><code>instructor</code></td>
-      <td>id of an instructor</td>
+      <td><strong>instructor</strong></td>
+      <td>id of the instructor who teaches the course</td>
     </tr>
     <tr>
-      <td><code>room</code></td>
-      <td>id of a room</td>
+      <td><strong>room</strong></td>
+      <td>id of the room in which the course is held</td>
     </tr>
     <tr>
-      <td><code>catalog_num</code></td>
+      <td><strong>catalog_num</strong></td>
       <td>departmental catalog number of the course, including the sequence number</td>
     </tr>
     <tr>
-      <td><code>meeting_days</code></td>
-      <td>TODO __including, __excluding?</td>
+      <td><strong>meeting_days</strong></td>
+      <td>days of the week when the course meets</td>
     </tr>
     <tr>
-      <td><code>start_time</code></td>
-      <td></td>
+      <td><strong>start_time</strong></td>
+      <td>time of day when the course starts</td>
     </tr>
     <tr>
-      <td><code>end_time</code></td>
-      <td></td>
+      <td><strong>end_time</strong></td>
+      <td>time of day when the course stops</td>
     </tr>
     <tr>
-      <td><code>start_date</code></td>
-      <td></td>
+      <td><strong>start_date</strong></td>
+      <td>date when the course starts</td>
     </tr>
     <tr>
-      <td><code>end_date</code></td>
-      <td></td>
+      <td><strong>end_date</strong></td>
+      <td>date when the course stops</td>
     </tr>
     <tr>
-      <td><code>seats</code></td>
-      <td>number of seats in the course</td>
+      <td><strong>seats</strong></td>
+      <td>number of seats available</td>
     </tr>
     <tr>
-      <td><code>component</code></td>
-      <td>e.g. LECTURE, LAB</td>
+      <td><strong>component</strong></td>
+      <td>what part of the course it is<br><strong>Examples:</strong> LEC, LAB</td>
     </tr>
     <tr>
-      <td><code>section</code></td>
+      <td><strong>section</strong></td>
       <td>a particular occurrence of this course. Used to help identify the course if multiple professors or times are offered in a given term</td>
     </tr>
     <tr>
-      <td><code>class_num</code></td>
-      <td>University's class number for the course, not unique</td>
+      <td><strong>class_num</strong></td>
+      <td>the University's class number for the course (not unique)</td>
     </tr>
     <tr>
-      <td><code>course_id</code></td>
-      <td>University's id number for the course, not unique</td>
+      <td><strong>course_id</strong></td>
+      <td>the University's id number for the course (not unique)</td>
     </tr>
   </tbody>
 </table>
 
-<p>The <code>start_time</code>, <code>end_time</code>, <code>start_date</code>, and <code>end_date</code> expect exact values by default. You can append <code>__lt</code> or <code>__gt</code> to each of them to filter by values that are less than or greater than the value you specify.</p>
+<p>The <strong>start_time</strong>, <strong>end_time</strong>, <strong>start_date</strong>, and <strong>end_date</strong> expect exact values by default. You can append <strong>__lt</strong> or <strong>__gt</strong> to each of them to filter by values that are less than or greater than the value you specify.</p>
 
 
 <h3 id="courses-response-format">Response format</h3>
@@ -96,8 +109,8 @@
   "section": "20",
   "room": "Music Administration Bldg 229",
   "meeting_days": "MoWeFr",
-  "start_time": "09:00:00",
-  "end_time": "09:50:00",
+  "start_time": "09:00",
+  "end_time": "09:50",
   "seats": 20,
   "topic": null,
   "component": "LEC",

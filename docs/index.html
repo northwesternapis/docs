@@ -22,6 +22,9 @@ title: Documentation | Northwestern Course Data API
 .big-divider {
   margin-top: 50px;
 }
+.container {
+  overflow: hidden;
+}
 </style>
 
 <div id="top">
@@ -44,7 +47,7 @@ title: Documentation | Northwestern Course Data API
       {% include schools.html %}
       {% include subjects.html %}
       {% include courses.html %}
-      {% include courses-detailed.html %}
+      {% include courses-detail.html %}
       {% include instructors.html %}
       {% include buildings.html %}
       {% include rooms.html %}
@@ -68,7 +71,7 @@ title: Documentation | Northwestern Course Data API
               <li><a href="#courses-response-format">Response format</a></li>
             </ul>
           </li>
-          <li><a href="#courses-detailed">/courses/detailed/</a></li>
+          <li><a href="#courses-detail">/courses/detail/</a></li>
           <li><a href="#instructors">/instructors/</a></li>
           <li><a href="#buildings">/buildings/</a></li>
           <li><a href="#rooms">/rooms/</a></li>
