@@ -94,7 +94,7 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
   </tbody>
 </table>
 
-<p>The <code>start_time</code>, <code>end_time</code>, <code>start_date</code>, and <code>end_date</code> expect exact values by default. You can append <code>__lt</code> or <code>__gt</code> to each of them to filter by values that are less than or greater than the value you specify.</p>
+<p>The <code>start_time</code>, <code>end_time</code>, <code>start_date</code>, <code>end_date</code>, and <code>seats</code> expect exact values by default. You can append <code>__lt</code>, <code>__gt</code>, <code>__lte</code>, or <code>__gte</code> to each of them to filter by values that are less than or greater than and/or equal to the value you specify.</p>
 
 
 <h3 id="courses-response-format">Response format</h3>
@@ -118,20 +118,4 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
   "course_id": 19151
 }
 {% endhighlight %}
-<p>TODO: what fields are null, etc</p>
-
-<p>Explanations of other fields:</p>
-<table class="table table-hover table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>topic</code></td>
-      <td>title of a topics course&mdash;courses that all have the same subject and number e.g. EECS 395</td>
-    </tr>
-  </tbody>
-</table>
+<code>topic</code> is the title of a topics course, which are courses that all have the same subject and number e.g. EECS 395. It may be null.
