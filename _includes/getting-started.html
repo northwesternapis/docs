@@ -11,7 +11,7 @@ var params = {
 };
 
 $.getJSON('http://api.asg.northwestern.edu/terms/', params, function(data) {
-  // data is the JavaScript object that resulted from parsing the response
+  // data is the JavaScript array that results from parsing the response
   console.log(data);
 });
 {% endhighlight %}
@@ -23,6 +23,6 @@ params = {
   'api_key': YOUR_KEY
 }
 response = requests.get('http://api.asg.northwestern.edu/terms/', params=params)
-# calling response.json() returns the response as a Python dictionary
+# calling response.json() returns the response as a Python dictionary or list
 print response.json()
 {% endhighlight %}
