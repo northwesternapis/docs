@@ -1,5 +1,5 @@
 <h2 id="rooms" class="page-header">Rooms</h2>
-<p>Returns a list of rooms. You must include a building id using the <code>building_id</code> parameter, or you can get details about specific rooms by including one or more <code>id</code> parameters. Object format:</p>
+<p>Returns a list of rooms. You must include a building id using the <code>building_id</code> parameter, or you can get details about specific rooms by including one or more <code>id</code> parameters. Here's the object representing Tech NG49 as an example:</p>
 {% highlight json %}
 {
   "id": 626,
@@ -9,7 +9,7 @@
 {% endhighlight %}
 
 <h3 id="rooms-details">Rooms (with details)</h3>
-<p>Includes full building data with each room.</p>
+<p>Query /rooms/details/ just like /rooms/. Includes full building data with each room. This is useful when you have some room <code>id</code>s and you need building information.</p>
 {% highlight json %}
 {
   "id": 339,

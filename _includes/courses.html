@@ -107,7 +107,7 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
   "subject": "MUS_THRY",
   "catalog_num": "251-0",
   "section": "20",
-  "room": "Music Administration Bldg 229",
+  "room": "Music Administration Building 229",
   "meeting_days": "MoWeFr",
   "start_time": "09:00",
   "end_time": "09:50",
@@ -122,7 +122,7 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
 
 <h3 id="courses-details">Courses (with details)</h3>
 
-<p>Query this just like the courses endpoint. Returns courses with additional details such as an overview, descriptions of different aspects of the course, and related discussion and/or lab sections. Here's the structure of a course object:</p>
+<p>Query /courses/details/ just like /courses/. Returns courses with additional details such as an overview, descriptions of different aspects of the course, and related discussion and/or lab sections. Here's the structure of a course object:</p>
 {% highlight json %}
 {
   "id": 56149,
@@ -139,7 +139,12 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
   "subject": "BIOL_SCI",
   "catalog_num": "216-0",
   "section": "20",
-  "room": "Tech Institute Lecture Room 3",
+  "room": {
+    "id": 548,
+    "building_id": 119,
+    "building_name": "Technological Institute",
+    "name": "LR3"
+  },
   "meeting_days": "MoWeFr",
   "start_time": "11:00",
   "end_time": "11:50",
