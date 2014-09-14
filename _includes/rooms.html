@@ -1,4 +1,24 @@
 <h2 id="rooms" class="page-header">Rooms</h2>
-<p>Returns a list of rooms. Must include the building id using the <code>building</code> parameter. Object format:</p>
+<p>Returns a list of rooms. You must include a building id using the <code>building_id</code> parameter, or you can get details about specific rooms by including one or more <code>id</code> parameters. Object format:</p>
 {% highlight json %}
+{
+  "id": 626,
+  "building_id": 119,
+  "name": "NG49",
+}
+{% endhighlight %}
+
+<h3 id="rooms-details">Rooms (with details)</h3>
+<p>Includes full building data with each room.</p>
+{% highlight json %}
+{
+  "id": 339,
+  "building": {
+    "id": 78,
+    "name": "Leverone Hall",
+    "lat": 42.0537599,
+    "lon": -87.6760697
+  },
+  "name": "Owen L Coon Auditorium"
+}
 {% endhighlight %}

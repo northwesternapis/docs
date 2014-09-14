@@ -1,4 +1,12 @@
 <h2 id="buildings" class="page-header">Buildings</h2>
-<p>Returns a list of all buildings. Buildings may or may not have latitude/longitude coordinates based on data from Google Maps. The Northwestern maps link may be null. Object format:</p>
+<p>Returns a list of all buildings. Most buildings have latitude and longitude coordinates from Google Maps. </p>
+
+<p>You can get information about particular buildings by including one or more <code>id</code> parameters, or you can filter using <code>lon</code> and <code>lat</code> with the <code>__lt</code>, <code>__gt</code>, <code>__lte</code>, and <code>__gte</code> suffixes. The Northwestern maps link may be null. Object format:</p>
 {% highlight json %}
+{
+  "id": 39,
+  "name": "Annenberg Hall",
+  "lat": 42.0560662,
+  "lon": -87.6745112
+}
 {% endhighlight %}

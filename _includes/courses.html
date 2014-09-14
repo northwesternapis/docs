@@ -2,7 +2,7 @@
 <p>Returns a list of courses.</p>
 
 <h3 id="courses-examples">Examples</h3>
-<p>To find all Spanish courses offered during Winter 2014, send a request to /courses/ with the parameters <strong>term</strong> set to 4530 and <strong>subject</strong> set to SPANISH, i.e.</p>
+<p>To find all Spanish courses offered during Winter 2014, send a request to /courses/ with the parameters <code>term</code> set to 4530 and <code>subject</code> set to SPANISH, i.e.</p>
 <pre>
 http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPANISH
 </pre>
@@ -119,3 +119,65 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
 }
 {% endhighlight %}
 <code>topic</code> is the title of a topics course, which are courses that all have the same subject and number e.g. EECS 395. It may be null.
+
+<h3 id="courses-details">Courses (with details)</h3>
+
+<p>Query this just like the courses endpoint. Returns courses with additional details such as an overview, descriptions of different aspects of the course, and related discussion and/or lab sections. Here's the structure of a course object:</p>
+{% highlight json %}
+{
+  "id": 56149,
+  "title": "Cell Biology",
+  "term": "2014 Winter",
+  "school": "WCAS",
+  "instructor": {
+    "name": "Gregory J Beitel",
+    "bio": null,
+    "address": "Pancoe Pavilion, Room 1407",
+    "phone": "847/467-7776",
+    "office_hours": "Wed 1-2pm, Fri 4-5pm"
+  },
+  "subject": "BIOL_SCI",
+  "catalog_num": "216-0",
+  "section": "20",
+  "room": "Tech Institute Lecture Room 3",
+  "meeting_days": "MoWeFr",
+  "start_time": "11:00",
+  "end_time": "11:50",
+  "start_date": "2014-01-06",
+  "end_date": "2014-03-15",
+  "seats": 220,
+  "overview": "Introduction to Cell Biology. Mechanisms that cells use to compartmentalize and transportcellular materials, to move, to regulate growth and death, to communicateand to respond totheir environments.",
+  "topic": null,
+  "attributes": "Natural Sciences Distro Area ",
+  "requirements": "Enrollment Requirements: Prerequisite: Students must completed CHEM 172-0 or CHEM 103-0 to register for this course.",
+  "component": "LEC",
+  "class_num": 26101,
+  "course_id": 19885,
+  "course_descriptions": [
+    {
+      "name": "Class Materials (Required)",
+      "desc": "Alberts et al. 2013. Essential Cell Biology, 4th edition. ISBN: 9780815344544. Up to date Clicker"
+    },
+    {
+      "name": "Teaching Method",
+      "desc": "Active learning exercises, lectures. Two exams (One in finals week but not cumulative) and multiple quizzes."
+    },
+    {
+      "name": "Registration Requirements",
+      "desc": "Prerequisites: CHEM 103 or 172"
+    }
+  ],
+  "course_components": [
+    {
+      "component": "DIS",
+      "meeting_days": "We",
+      "start_time": "19:00",
+      "end_time": "20:50",
+      "section": "60",
+      "room": "Technological Institute AUD"
+    }
+  ]
+}
+{% endhighlight %}
+
+Many of the additional fields may be empty or null. For instance, <code>course_descriptions</code> and <code>course_componenents</code> might be empty lists, some instructor details might be null, and <code>overview</code>, <code>attributes</code>, and <code>requirements</code> might be null.
