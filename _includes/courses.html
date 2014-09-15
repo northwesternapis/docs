@@ -4,12 +4,12 @@
 <h3 id="courses-examples">Examples</h3>
 <p>To find all Spanish courses offered during Winter 2014, send a request to /courses/ with the parameters <code>term</code> set to 4530 and <code>subject</code> set to SPANISH, i.e.</p>
 <pre>
-http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPANISH
+http://api.asg.northwestern.edu/courses/?key=YOUR_KEY&term=4530&subject=SPANISH
 </pre>
 
 <h3 id="courses-parameters">Parameters</h3>
 
-<p>To query the /courses/ endpoint, you must include a minimum set of parameters. These combinations are listed below. You can include additional parameters to narrow down your search, and the set of parameters must include one of these combinations:</p>
+<p>To query the /courses/ endpoint, you must include a minimum set of parameters. These combinations are listed here:</p>
 <!--<p><span class="lead">TODO</span> there are a maximum of 200 courses returned per response. If a response is truncated, there will be a <code>Response-Warning</code> header included</p>-->
 <ul>
   <li><code>instructor</code></li>
@@ -18,7 +18,7 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
   <li><code>term</code>, <code>room</code></li>
 </ul>
 
-<p>Here are descriptions of all available parameters:</p>
+<p>You can include additional parameters to narrow down your search. Here are descriptions of all available parameters:</p>
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -103,6 +103,7 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
 {
   "id": 78818,
   "title": "Music and Mind",
+  "term": "2010 Fall",
   "instructor": "Richard D Ashley",
   "subject": "MUS_THRY",
   "catalog_num": "251-0",
