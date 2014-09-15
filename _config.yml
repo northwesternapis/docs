@@ -1,7 +1,7 @@
 # Site settings
-title: Northwestern Course Data API documentation
+title: Northwestern Course Data API
 email: asg-technology@u.northwestern.edu
-description: "Documentation for Northwestern University's course data API"
+description: "Learn how to use Northwestern University course data in your programs and applications! Visit this page to read documentation and apply for keys."
 baseurl: ""
 url: "http://developer.asg.northwestern.edu"
 twitter_username: northwesternasg
