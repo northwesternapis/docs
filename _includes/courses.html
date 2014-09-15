@@ -10,10 +10,10 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
 <h3 id="courses-parameters">Parameters</h3>
 
 <p>To query the /courses/ endpoint, you must include a minimum set of parameters. These combinations are listed below. You can include additional parameters to narrow down your search, but the set of parameters must include one of these combinations.</p>
-<p><span class="lead">TODO</span> there are a maximum of 200 courses returned per response. If a response is truncated, there will be a <code>Response-Warning</code> header included</p>
+<!--<p><span class="lead">TODO</span> there are a maximum of 200 courses returned per response. If a response is truncated, there will be a <code>Response-Warning</code> header included</p>-->
 <ul>
   <li><code>instructor</code></li>
-  <li><code>id</code> (can be multiple, up to 200)</li>
+  <li><code>id</code> (multiple accepted up to 200)</li>
   <li><code>term</code>, <code>subject</code></li>
   <li><code>term</code>, <code>room</code></li>
 </ul>
@@ -29,67 +29,67 @@ http://api.asg.northwestern.edu/courses/?api_key=YOUR_KEY&term=4530&subject=SPAN
   <tbody>
     <tr>
       <td><code>id</code></td>
-      <td>id of the course. Uniquely idenfities a course; used only by this API <strong>integer</strong></td>
+      <td>id of the course. Uniquely idenfities a course; used only by this API </td>
     </tr>
     <tr>
       <td><code>term</code></td>
-      <td>id of the term <strong>integer</strong></td>
+      <td>id of the term </td>
     </tr>
     <tr>
       <td><code>subject</code></td>
-      <td>symbol representing the subject of the course <strong>string</strong> e.g. BIOL_SCI, PHIL</td>
+      <td>symbol representing the subject of the course  e.g. BIOL_SCI, PHIL</td>
     </tr>
     <tr>
       <td><code>instructor</code></td>
-      <td>id of the instructor who teaches the course <strong>integer</strong></td>
+      <td>id of the instructor who teaches the course </td>
     </tr>
     <tr>
       <td><code>room</code></td>
-      <td>id of the room in which the course is held <strong>integer</strong></td>
+      <td>id of the room in which the course is held </td>
     </tr>
     <tr>
       <td><code>catalog_num</code></td>
-      <td>departmental catalog number of the course, including the sequence number <strong>string</strong></td>
+      <td>departmental catalog number of the course, including the sequence number </td>
     </tr>
     <tr>
       <td><code>meeting_days</code></td>
-      <td>days of the week when the course meets <strong>string</strong></td>
+      <td>days of the week when the course meets </td>
     </tr>
     <tr>
       <td><code>start_time</code></td>
-      <td>time of day when the course starts <strong>string</strong> w/format HH:MM (24-hour clock)</td>
+      <td>HH:MM (24-hour clock) time of day when the course starts</td>
     </tr>
     <tr>
       <td><code>end_time</code></td>
-      <td>time of day when the course stops <strong>string</strong> w/format HH:MM (24-hour clock)</td>
+      <td>HH:MM (24-hour clock) time of day when the course stops</td>
     </tr>
     <tr>
       <td><code>start_date</code></td>
-      <td>date when the course starts <strong>string</strong> w/format YYYY-MM-DD</td>
+      <td>YYYY-MM-DD date when the course starts</td>
     </tr>
     <tr>
       <td><code>end_date</code></td>
-      <td>date when the course stops <strong>string</strong> w/format YYYY-MM-DD</td>
+      <td>YYYY-MM-DD date when the course stops</td>
     </tr>
     <tr>
       <td><code>seats</code></td>
-      <td>number of seats available <strong>string</strong></td>
+      <td>number of seats available </td>
     </tr>
     <tr>
       <td><code>component</code></td>
-      <td>what part of the course it is <strong>string</strong> e.g. LEC, LAB</td>
+      <td>what part of the course it is  e.g. LEC, LAB</td>
     </tr>
     <tr>
       <td><code>section</code></td>
-      <td>a particular occurrence of this course. Used to help identify the course if multiple professors or times are offered in a given term <strong>string</strong></td>
+      <td>a particular occurrence of this course. Used to help identify the course if multiple professors or times are offered in a given term </td>
     </tr>
     <tr>
       <td><code>class_num</code></td>
-      <td>the University's class number for the course (not unique) <strong>integer</strong></td>
+      <td>the University's class number for the course (not unique) </td>
     </tr>
     <tr>
       <td><code>course_id</code></td>
-      <td>the University's id number for the course (not unique) <strong>integer</strong></td>
+      <td>the University's id number for the course (not unique) </td>
     </tr>
   </tbody>
 </table>

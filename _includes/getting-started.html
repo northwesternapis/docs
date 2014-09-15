@@ -1,13 +1,13 @@
 <h2 id="getting-started" class="page-header">Getting started</h2>
-<p>First, <a href="https://api.asg.northwestern.edu/manage/login/">log in</a> and apply for a key. Your request should be reviewed within 48 business hours. For now, each project is allotted 10,000 API requests per day. All of your requests to the API must include your key using the <code>api_key</code> parameter.</p>
+<p>First, <a href="https://api.asg.northwestern.edu/manage/login/">log in</a> and apply for a key. Your request should be reviewed within 48 business hours. (2014-09-14 note: there is a temporary delay.) For now, each project is allotted 10,000 API requests per day. All of your requests to the API must include your key using the <code>key</code> parameter.</p>
 <p>The base URL for the Course Data API is:</p>
 <pre>
 http://api.asg.northwestern.edu/
 </pre>
-<p>To retrieve data from the API, send an HTTP GET request to the base URL + an endpoint. For instance, pasting <code>http://api.asg.northwestern.edu/terms/?api_key=YOUR_KEY</code> in your browser will return a string in JSON representing a list of terms. Making the same request would look like this using JavaScript with jQuery:</p>
+<p>To retrieve data from the API, send an HTTP GET request to the base URL + an endpoint. For instance, pasting <code>http://api.asg.northwestern.edu/terms/?key=YOUR_KEY</code> in your browser will return a string in JSON representing a list of terms. Making the same request would look like this using JavaScript with jQuery:</p>
 {% highlight javascript %}
 var params = {
-  api_key: YOUR_KEY
+  key: YOUR_KEY
 };
 
 $.getJSON('http://api.asg.northwestern.edu/terms/', params, function(data) {
@@ -20,7 +20,7 @@ $.getJSON('http://api.asg.northwestern.edu/terms/', params, function(data) {
 import requests
 
 params = {
-  'api_key': YOUR_KEY
+  'key': YOUR_KEY
 }
 response = requests.get('http://api.asg.northwestern.edu/terms/', params=params)
 # calling response.json() returns the response as a Python dictionary or list
