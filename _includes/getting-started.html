@@ -1,5 +1,5 @@
 <h2 id="getting-started" class="page-header">Getting started</h2>
-<p>First, <a href="https://api.asg.northwestern.edu/manage/login/">log in</a> and apply for a key. Your request should be reviewed within 48 business hours. (2014-09-14 note: there is a temporary delay.) For now, each project is allotted 10,000 API requests per day. All of your requests to the API must include your key using the <code>key</code> parameter.</p>
+<p>First, <a href="https://api.asg.northwestern.edu/manage/login/">log in</a> and apply for a key. Your request should be reviewed within 48 business hours. For now, each project is allotted 10,000 API requests per day. All of your requests to the API must include your key using the <code>key</code> parameter.</p>
 <p>The base URL for the Course Data API is:</p>
 <pre>
 http://api.asg.northwestern.edu/
@@ -26,3 +26,4 @@ response = requests.get('http://api.asg.northwestern.edu/terms/', params=params)
 # calling response.json() returns the response as a Python dictionary or list
 print response.json()
 {% endhighlight %}
+<p>You can find clients for various languages under the <a href="https://github.com/northwesternapis">GitHub organization</a> for this project. As of this writing, there are Python and Ruby wrappers available.</p>
