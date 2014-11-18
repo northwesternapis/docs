@@ -2,14 +2,14 @@
 <p>Returns a list of courses.</p>
 
 <h3 id="courses-examples">Examples</h3>
-<p>To find all Spanish courses offered during Winter 2014, send a request to /courses/ with the parameters <code>term</code> set to 4530 and <code>subject</code> set to SPANISH, i.e.</p>
+<p>To find all Spanish courses offered during Winter 2014, send a request to /courses with the parameters <code>term</code> set to 4530 and <code>subject</code> set to SPANISH, i.e.</p>
 <pre>
 http://api.asg.northwestern.edu/courses/?key=YOUR_KEY&term=4530&subject=SPANISH
 </pre>
 
 <h3 id="courses-parameters">Parameters</h3>
 
-<p>To query the /courses/ endpoint, you must include a minimum set of parameters. These combinations are listed here:</p>
+<p>To query the /courses endpoint, you must include a minimum set of parameters. These combinations are listed here:</p>
 <!--<p><span class="lead">TODO</span> there are a maximum of 200 courses returned per response. If a response is truncated, there will be a <code>Response-Warning</code> header included</p>-->
 <ul>
   <li><code>instructor</code></li>
@@ -123,7 +123,7 @@ http://api.asg.northwestern.edu/courses/?key=YOUR_KEY&term=4530&subject=SPANISH
 
 <h3 id="courses-details">Courses (with details)</h3>
 
-<p>Query /courses/details/ just like /courses/. Returns courses with additional details such as an overview, descriptions of different aspects of the course, and related discussion and/or lab sections. Here's the structure of a course object:</p>
+<p>Query /courses/details just like /courses. Returns courses with additional details such as an overview, descriptions of different aspects of the course, and related discussion and/or lab sections. Here's the structure of a course object:</p>
 {% highlight json %}
 {
   "id": 56149,
