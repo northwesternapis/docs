@@ -1,0 +1,47 @@
+{
+    "name": "Northwestern Course Data APIs", 
+    "description": "Sources of stuctured data about Northwestern University", 
+    "url": "http://developer.asg.northwestern.edu/apis.json",
+    "created": "2014-11-21", 
+    "modified": "2014-11-21", 
+    "tags": [
+        "Northwestern University", 
+        "education"
+    ],
+    "apis": [
+        {
+            "name": "Northwestern Course Data API", 
+            "description": "A set of endpoints to retrieve data describing Northwestern University courses, instructors, and other related entities", 
+            "baseURL": "http://api.asg.northwestern.edu", 
+            "humanURL": "http://developer.asg.northwestern.edu", 
+            "tags": [
+                "courses", 
+                "course", 
+                "instructors", 
+                "buildings", 
+                "classrooms",
+                "subjects",
+                "schools"
+            ],
+            "properties": [
+                {
+                    "type": "X-documentation",
+                    "url": "http://developer.asg.northwestern.edu/docs"
+                }
+            ],
+            "contact": [
+                {
+                    "FN": "ASG Technology VP",
+                    "email": "asg-technology@u.northwestern.edu"
+                }
+            ]
+        }
+    ], 
+    "maintainers": [
+        {
+            "FN": "Associated Student Government",
+            "email": "asg-technology@u.northwestern.edu",
+            "X-Github": "nuasg"
+        }
+    ]
+}
